@@ -1,0 +1,20 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "SignUpLogin";
+
+service GrpcSignUpLogin {
+	rpc GetAllGuilds (GetAllRequest) returns (SignUpLoginResponse);
+}
+
+message GetAllRequest{
+	string Id = 1;
+}
+
+message GrpcSignUpLoginModel{
+	string Id = 1;
+	repeated string Guilds = 2;
+}
+
+message SignUpLoginResponse{
+	GrpcSignUpLoginModel SignUpLogin = 1;
+}
