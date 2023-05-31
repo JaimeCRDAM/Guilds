@@ -165,9 +165,7 @@ namespace Guilds.Controllers
 
             var newChannel = channel.mapToGuildChannel();
 
-            var newGuildChannelList = guild.Channels.ToList();
-
-            newGuildChannelList.Add(newChannel);
+            ((List<GuildChannel>)guild.Channels).Add(newChannel);
 
             _guildRepo.Update(guild);
 

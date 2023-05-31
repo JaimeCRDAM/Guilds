@@ -14,9 +14,9 @@ namespace Guilds.Models
         [Column("ownerid")]
         public Guid OwnerId { get; set; }
         [Column("guildchannel")]
-        public IEnumerable<GuildChannel> Channels { get; set; }
+        public List<GuildChannel> Channels { get; set; }
         [Column("guilduser")]
-        public IEnumerable<GuildUser> Users { get; set; }
+        public List<GuildUser> Users { get; set; }
         public JoinedGuildDto mapToJoinedGuildDto()
         {
             var joinedGuild = new JoinedGuildDto
