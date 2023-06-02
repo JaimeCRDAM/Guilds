@@ -11,8 +11,8 @@ namespace Guilds.Models
     {
         [Column("name")]
         public string Name { get; set; }
-        [Column("ownerid")]
-        public Guid OwnerId { get; set; }
+        [Column("owner")]
+        public GuildUser Owner { get; set; }
         [Column("guildchannel")]
         public List<GuildChannel> Channels { get; set; }
         [Column("guilduser")]

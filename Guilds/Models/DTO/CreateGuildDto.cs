@@ -11,7 +11,7 @@
             {
                 Id = Guid.NewGuid(),
                 Name = Name,
-                OwnerId = Owner.Id,
+                Owner = Owner,
                 Channels = new List<GuildChannel>(),
                 Users = new List<GuildUser>()
             };

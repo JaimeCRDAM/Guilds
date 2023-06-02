@@ -30,7 +30,7 @@ namespace Guilds
                 .PartitionKey(g => g.Id)
                 .Column(g => g.Id, cm => cm.WithName("id"))
                 .Column(g => g.Name, cm => cm.WithName("name"))
-                .Column(g => g.OwnerId, cm => cm.WithName("ownerid"))
+                .Column(g => g.Owner, cm => cm.WithName("owner"))
                 .Column(g => g.Channels, cm => cm.WithName("channel").AsFrozen())
                 .Column(g => g.Users, cm => cm.WithName("user").AsFrozen());
         }

@@ -36,10 +36,9 @@ namespace Guilds.Controllers
 
             _guildRepo.Add(newGuild);
 
-            var joinedGuild = newGuild.mapToJoinedGuildDto();
-            _httpApiRest.AddUserToGuild(newGuild.OwnerId, newGuild.Id);
+            _httpApiRest.AddUserToGuild(newGuild.Owner.Id, newGuild.Id);
 
-            return Ok(joinedGuild);
+            return Ok(newGuild);
         }
 
         /// <summary>
